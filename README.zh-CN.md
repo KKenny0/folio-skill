@@ -41,24 +41,24 @@ Signal Pack 将它们视为同一个编辑问题：从 **evidence（证据）** 
 
 以下案例展示的不是单纯的风格样本，而是 Signal Pack 如何分别解决不同的阅读任务。
 
-<table>
+<table width="100%">
   <tr>
-    <th><a href="https://github.com/KKenny0/Clipplane">Clipplane</a></th>
-    <th><a href="https://github.com/RealKai42/qwerty-learner">Qwerty Learner</a></th>
-    <th><a href="https://github.com/warpstreamlabs/bento">Bento</a></th>
-    <th><a href="https://x.com/cerebras/article/2081828128952095022">GPT-5.6 模型路由 ↗</a></th>
+    <th width="25%" align="center"><a href="https://github.com/KKenny0/Clipplane">Clipplane</a></th>
+    <th width="25%" align="center"><a href="https://github.com/RealKai42/qwerty-learner">Qwerty Learner</a></th>
+    <th width="25%" align="center"><a href="https://github.com/warpstreamlabs/bento">Bento</a></th>
+    <th width="25%" align="center"><a href="https://x.com/cerebras/article/2081828128952095022">GPT-5.6 模型路由 ↗</a></th>
   </tr>
   <tr>
-    <td><a href="assets/showcase/clipplane.jpg"><img src="assets/showcase/clipplane.jpg" alt="Clipplane 内容卡片" width="180" /></a></td>
-    <td><a href="assets/showcase/qwerty-learner.jpg"><img src="assets/showcase/qwerty-learner.jpg" alt="Qwerty Learner 内容卡片" width="180" /></a></td>
-    <td><a href="assets/showcase/bento.jpg"><img src="assets/showcase/bento.jpg" alt="Bento 内容卡片" width="180" /></a></td>
-    <td><a href="assets/showcase/gpt-5-6-routing.jpg"><img src="assets/showcase/gpt-5-6-routing.jpg" alt="GPT-5.6 模型路由内容卡片" width="180" /></a></td>
+    <td width="25%" align="center" valign="top"><a href="assets/showcase/clipplane.jpg"><img src="assets/showcase/clipplane.jpg" alt="Clipplane 内容卡片" width="180" height="240" /></a></td>
+    <td width="25%" align="center" valign="top"><a href="assets/showcase/qwerty-learner.jpg"><img src="assets/showcase/qwerty-learner.jpg" alt="Qwerty Learner 内容卡片" width="180" height="240" /></a></td>
+    <td width="25%" align="center" valign="top"><a href="assets/showcase/bento.jpg"><img src="assets/showcase/bento.jpg" alt="Bento 内容卡片" width="180" height="240" /></a></td>
+    <td width="25%" align="center" valign="top"><a href="assets/showcase/gpt-5-6-routing.jpg"><img src="assets/showcase/gpt-5-6-routing.jpg" alt="GPT-5.6 模型路由内容卡片" width="180" height="240" /></a></td>
   </tr>
   <tr>
-    <td><strong>开源工具推荐</strong><br />中文社媒多图轮播<br />将本地优先的网页剪藏工作流与当前可用方式清楚地呈现出来。</td>
-    <td><strong>开源工具推荐</strong><br />中文社媒多图轮播<br />把功能列表转换为“它适合谁”的明确判断。</td>
-    <td><strong>产品 / 项目解读</strong><br />中文社媒多图轮播<br />用“一个容器”的隐喻解释为什么一个文件既可以是文档，也可以是软件。</td>
-    <td><strong>技术解读</strong><br />中文社媒多图轮播<br />基于 <a href="https://x.com/cerebras/article/2081828128952095022">Cerebras 的 GPT-5.6 原始帖文</a>；按信息视野与任务边界区分 Agent 角色，而不是把多 Agent 简化为人头叠加。</td>
+    <td width="25%" valign="top"><strong>开源工具推荐</strong><br />中文社媒多图轮播<br />将本地优先的网页剪藏工作流与当前可用方式清楚地呈现出来。</td>
+    <td width="25%" valign="top"><strong>开源工具推荐</strong><br />中文社媒多图轮播<br />把功能列表转换为“它适合谁”的明确判断。</td>
+    <td width="25%" valign="top"><strong>产品 / 项目解读</strong><br />中文社媒多图轮播<br />用“一个容器”的隐喻解释为什么一个文件既可以是文档，也可以是软件。</td>
+    <td width="25%" valign="top"><strong>技术解读</strong><br />中文社媒多图轮播<br />基于 <a href="https://x.com/cerebras/article/2081828128952095022">Cerebras 的 GPT-5.6 原始帖文</a>；按信息视野与任务边界区分 Agent 角色，而不是把多 Agent 简化为人头叠加。</td>
   </tr>
 </table>
 
