@@ -1,10 +1,14 @@
+<div align="center">
+
 # Signal Pack
 
-[简体中文](README.zh-CN.md)
+**Turn scattered sources into a publishable editorial package.**
 
-![Signal Pack demo banner](assets/signal-pack-demo.jpg)
+[中文](README.zh-CN.md) · [Showcase](#showcase) · [Install](#install)
 
-> Turn scattered sources into a publishable editorial package.
+<img src="assets/signal-pack-demo.jpg" alt="Signal Pack: source material becomes a publishable editorial package" width="960" />
+
+</div>
 
 Signal Pack turns a URL, file, or knowledge point into a coherent set of materials people can actually read, share, and turn into visuals.
 
@@ -42,7 +46,7 @@ Selected editorial packages made with Signal Pack. Each example is evidence of a
     <th><a href="https://github.com/KKenny0/Clipplane">Clipplane</a></th>
     <th><a href="https://github.com/RealKai42/qwerty-learner">Qwerty Learner</a></th>
     <th><a href="https://github.com/warpstreamlabs/bento">Bento</a></th>
-    <th>GPT-5.6 model routing</th>
+    <th><a href="https://x.com/cerebras/article/2081828128952095022">GPT-5.6 model routing ↗</a></th>
   </tr>
   <tr>
     <td><a href="assets/showcase/clipplane.jpg"><img src="assets/showcase/clipplane.jpg" alt="Clipplane editorial card" width="180" /></a></td>
@@ -54,7 +58,7 @@ Selected editorial packages made with Signal Pack. Each example is evidence of a
     <td><strong>Open-source tool recommendation</strong><br />Chinese social carousel<br />Makes the local-first clipping workflow and its current availability legible at a glance.</td>
     <td><strong>Open-source tool recommendation</strong><br />Chinese social carousel<br />Turns a feature list into a clear “who is this for?” decision.</td>
     <td><strong>Product / project explainer</strong><br />Chinese social carousel<br />Uses a simple container metaphor to explain why one file can behave as both document and software.</td>
-    <td><strong>Technical explainer</strong><br />Chinese social carousel<br />Separates agent roles by information horizon and task boundary, rather than treating multi-agent as headcount.</td>
+    <td><strong>Technical explainer</strong><br />Chinese social carousel<br />Based on <a href="https://x.com/cerebras/article/2081828128952095022">Cerebras’ GPT-5.6 source post</a>; separates agent roles by information horizon and task boundary, rather than treating multi-agent as headcount.</td>
   </tr>
 </table>
 
