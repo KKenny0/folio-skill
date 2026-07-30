@@ -41,24 +41,24 @@ The public output always stays intentionally small:
 
 Selected editorial packages made with Signal Pack. Each example is evidence of a different reading job—not just a style sample.
 
-<table>
+<table width="100%">
   <tr>
-    <th><a href="https://github.com/KKenny0/Clipplane">Clipplane</a></th>
-    <th><a href="https://github.com/RealKai42/qwerty-learner">Qwerty Learner</a></th>
-    <th><a href="https://github.com/warpstreamlabs/bento">Bento</a></th>
-    <th><a href="https://x.com/cerebras/article/2081828128952095022">GPT-5.6 model routing ↗</a></th>
+    <th width="25%" align="center"><a href="https://github.com/KKenny0/Clipplane">Clipplane</a></th>
+    <th width="25%" align="center"><a href="https://github.com/RealKai42/qwerty-learner">Qwerty Learner</a></th>
+    <th width="25%" align="center"><a href="https://github.com/warpstreamlabs/bento">Bento</a></th>
+    <th width="25%" align="center"><a href="https://x.com/cerebras/article/2081828128952095022">GPT-5.6 model routing ↗</a></th>
   </tr>
   <tr>
-    <td><a href="assets/showcase/clipplane.jpg"><img src="assets/showcase/clipplane.jpg" alt="Clipplane editorial card" width="180" /></a></td>
-    <td><a href="assets/showcase/qwerty-learner.jpg"><img src="assets/showcase/qwerty-learner.jpg" alt="Qwerty Learner editorial card" width="180" /></a></td>
-    <td><a href="assets/showcase/bento.jpg"><img src="assets/showcase/bento.jpg" alt="Bento editorial card" width="180" /></a></td>
-    <td><a href="assets/showcase/gpt-5-6-routing.jpg"><img src="assets/showcase/gpt-5-6-routing.jpg" alt="GPT-5.6 model routing editorial card" width="180" /></a></td>
+    <td width="25%" align="center" valign="top"><a href="assets/showcase/clipplane.jpg"><img src="assets/showcase/clipplane.jpg" alt="Clipplane editorial card" width="180" height="240" /></a></td>
+    <td width="25%" align="center" valign="top"><a href="assets/showcase/qwerty-learner.jpg"><img src="assets/showcase/qwerty-learner.jpg" alt="Qwerty Learner editorial card" width="180" height="240" /></a></td>
+    <td width="25%" align="center" valign="top"><a href="assets/showcase/bento.jpg"><img src="assets/showcase/bento.jpg" alt="Bento editorial card" width="180" height="240" /></a></td>
+    <td width="25%" align="center" valign="top"><a href="assets/showcase/gpt-5-6-routing.jpg"><img src="assets/showcase/gpt-5-6-routing.jpg" alt="GPT-5.6 model routing editorial card" width="180" height="240" /></a></td>
   </tr>
   <tr>
-    <td><strong>Open-source tool recommendation</strong><br />Chinese social carousel<br />Makes the local-first clipping workflow and its current availability legible at a glance.</td>
-    <td><strong>Open-source tool recommendation</strong><br />Chinese social carousel<br />Turns a feature list into a clear “who is this for?” decision.</td>
-    <td><strong>Product / project explainer</strong><br />Chinese social carousel<br />Uses a simple container metaphor to explain why one file can behave as both document and software.</td>
-    <td><strong>Technical explainer</strong><br />Chinese social carousel<br />Based on <a href="https://x.com/cerebras/article/2081828128952095022">Cerebras’ GPT-5.6 source post</a>; separates agent roles by information horizon and task boundary, rather than treating multi-agent as headcount.</td>
+    <td width="25%" valign="top"><strong>Open-source tool recommendation</strong><br />Chinese social carousel<br />Makes the local-first clipping workflow and its current availability legible at a glance.</td>
+    <td width="25%" valign="top"><strong>Open-source tool recommendation</strong><br />Chinese social carousel<br />Turns a feature list into a clear “who is this for?” decision.</td>
+    <td width="25%" valign="top"><strong>Product / project explainer</strong><br />Chinese social carousel<br />Uses a simple container metaphor to explain why one file can behave as both document and software.</td>
+    <td width="25%" valign="top"><strong>Technical explainer</strong><br />Chinese social carousel<br />Based on <a href="https://x.com/cerebras/article/2081828128952095022">Cerebras’ GPT-5.6 source post</a>; separates agent roles by information horizon and task boundary, rather than treating multi-agent as headcount.</td>
   </tr>
 </table>
 
