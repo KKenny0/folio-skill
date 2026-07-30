@@ -1,5 +1,7 @@
 # Signal Pack
 
+![Signal Pack demo banner](assets/signal-pack-demo.png)
+
 Turn a URL, file, or knowledge point into a publish-ready editorial package:
 
 - `publish-info`: title, summary, and tags
