@@ -38,7 +38,7 @@ Internal fact-checking and QA records are used to improve the result, not emitte
 
 Selected examples generated with Signal Pack.
 
-| Clipplane | Qwerty Learner | Bento | GPT-5.6 model routing |
+| [Clipplane](https://github.com/KKenny0/Clipplane) | [Qwerty Learner](https://github.com/RealKai42/qwerty-learner) | [Bento](https://github.com/warpstreamlabs/bento) | GPT-5.6 model routing |
 | --- | --- | --- | --- |
 | <a href="assets/showcase/clipplane.jpg"><img src="assets/showcase/clipplane.jpg" alt="Clipplane showcase" width="180" /></a> | <a href="assets/showcase/qwerty-learner.jpg"><img src="assets/showcase/qwerty-learner.jpg" alt="Qwerty Learner showcase" width="180" /></a> | <a href="assets/showcase/bento.jpg"><img src="assets/showcase/bento.jpg" alt="Bento showcase" width="180" /></a> | <a href="assets/showcase/gpt-5-6-routing.jpg"><img src="assets/showcase/gpt-5-6-routing.jpg" alt="GPT-5.6 model routing showcase" width="180" /></a> |
 
