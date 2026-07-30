@@ -1,22 +1,11 @@
 interface:
-interface:
-  display_name: "Editorial Visual Pack"
-  display_name: "Editorial Visual Pack"
+  display_name: "Signal Pack"
   short_description: "Create articles, project recommendations, and visual specs"
-  short_description: "Create articles, project recommendations, and visual specs"
-  default_prompt: "Use $create-editorial-visual-pack to turn this source into a publish-ready article and self-contained visual specs."
-  default_prompt: "Use $create-editorial-visual-pack to turn this source into a publish-ready article and self-contained visual specs."
-policy:
+  default_prompt: "Use $signal-pack to turn this source into a publish-ready article and self-contained visual specs."
 policy:
   products:
-  products:
-  - chatgpt
   - chatgpt
   - codex
-  - codex
-  - api
   - api
   - atlas
-  - atlas
-  allow_implicit_invocation: true
   allow_implicit_invocation: true
