@@ -1,6 +1,6 @@
 # Signal Pack
 
-![Signal Pack demo banner](assets/signal-pack-demo.png)
+![Signal Pack demo banner](assets/signal-pack-demo.jpg)
 
 Turn a URL, file, or knowledge point into a publish-ready editorial package:
 
@@ -33,6 +33,14 @@ The skill intentionally returns only three user-facing artifacts, in this order:
 3. `figure-spec`
 
 Internal fact-checking and QA records are used to improve the result, not emitted as extra deliverables.
+
+## Showcase
+
+Selected examples generated with Signal Pack.
+
+| Clipplane | Qwerty Learner | Bento | GPT-5.6 model routing |
+| --- | --- | --- | --- |
+| <a href="assets/showcase/clipplane.jpg"><img src="assets/showcase/clipplane.jpg" alt="Clipplane showcase" width="180" /></a> | <a href="assets/showcase/qwerty-learner.jpg"><img src="assets/showcase/qwerty-learner.jpg" alt="Qwerty Learner showcase" width="180" /></a> | <a href="assets/showcase/bento.jpg"><img src="assets/showcase/bento.jpg" alt="Bento showcase" width="180" /></a> | <a href="assets/showcase/gpt-5-6-routing.jpg"><img src="assets/showcase/gpt-5-6-routing.jpg" alt="GPT-5.6 model routing showcase" width="180" /></a> |
 
 ## License
 
