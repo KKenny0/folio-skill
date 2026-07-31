@@ -1,16 +1,16 @@
 # Style Router
 
-先确定发布场景、覆盖范围和每张图要产生的认知变化，再选择视觉语言。Style 是表达机制，不是题材皮肤。
+先确定发布场景、覆盖范围和每张图要产生的认知变化，再选择视觉语言。Style 是表达机制，不是题材皮肤。配图中的事实性文字和关系必须先写入 `article-draft`；Style 只能决定表达，不能补充事实。
 
 ## 优先级
 
-1. 用户明确指定 Style：直接采用，不自动改写。
+1. 用户明确指定任一受支持 Style：直接采用，不自动改写；其他 Style 按 `SKILL.md` 的支持范围处理，不生成临时 Profile。
 2. 用户未指定：按信息关系与认知目标自动选择，并在 `figure-spec` 开头说明理由。
 3. 同一套图默认只用一种 Style；只有用户明确要求混用时才逐图路由。
 
 ## 自动选择
 
-| 判断信号 | 手绘卡通信息图 | Halftone Paper-Collage v2 |
+| 判断信号 | Hand-Drawn Cartoon Infographic | Halftone Paper-Collage Editorial Assembly System v2 |
 | --- | --- | --- |
 | 首要认知目标 | 降低理解门槛、解释概念、引导行动、建立亲和感 | 让边界、比较、转化、包含、分组或选择关系可感知 |
 | 主要信息形态 | 简短步骤、类比、人物场景、提示清单、概念解释 | 有来源支撑的对照、状态变化、边界、材料层次与项目身份 |
@@ -39,8 +39,8 @@
 
 优先级：用户指定 > 发布平台要求 > Style 默认。
 
-- 手绘卡通信息图默认横版。
-- Halftone Paper-Collage v2 默认 3:4 竖版。
+- Hand-Drawn Cartoon Infographic 默认横版。
+- Halftone Paper-Collage Editorial Assembly System v2 默认 3:4 竖版。
 - 同一套图统一比例；每张图仍需重复写明比例和方向。
 
 自动路由理由必须写成“因为需要让读者看懂/感知 `[认知目标]`，核心信息关系是 `[关系]`，所以选择 `[Style]`”，不能只写“更适合技术内容”或“更有设计感”。

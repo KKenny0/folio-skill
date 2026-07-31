@@ -1,11 +1,10 @@
 interface:
   display_name: "Signal Pack"
-  short_description: "Create articles, project recommendations, and visual specs"
-  default_prompt: "Use $signal-pack to turn this source into a publish-ready article and self-contained visual specs."
+  short_description: "Create publish-ready copy and visual briefs"
+  default_prompt: "Use $signal-pack to turn this source into publish-ready copy and self-contained visual briefs."
 policy:
   products:
   - chatgpt
   - codex
-  - api
   - atlas
   allow_implicit_invocation: true

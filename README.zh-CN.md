@@ -2,7 +2,7 @@
 
 # Signal Pack
 
-**把分散来源，变成一套可直接发布的编辑内容。**
+**把来源变成可发布文稿和可直接进入视觉生产的配图规格。**
 
 [English](README.md) · [案例](#showcase) · [安装](#安装)
 
@@ -10,7 +10,7 @@
 
 </div>
 
-Signal Pack 将 URL、文件或一个知识点，整理为彼此一致、能被读懂、分享并继续出图的内容套件。
+Signal Pack — Source-to-Publish Editorial Skill — 将 URL、文件或一个知识点整理为彼此一致的文稿和配图制作单。
 
 ## 为什么需要 Signal Pack
 
@@ -28,14 +28,18 @@ Signal Pack 将它们视为同一个编辑问题：从 **evidence（证据）** 
 | --- | --- | --- |
 | 证据 | 内部事实核查 | 让主张、数字、限制与证据边界始终以来源为准。 |
 | 叙事 | `article-draft` | 一篇可独立发布、具有完整论证的文章，而不是图片文案的拼接。 |
-| 视觉方向 | `figure-spec` | 每张图一份自包含、可直接生图的规格：图上文案、构图、视觉机制与事实限制。 |
+| 视觉方向 | `figure-spec` | 每张图一份自包含的配图制作单：图上文案、构图、视觉机制与事实限制。 |
 | 发布 | `publish-info` | 面向发布场景的标题、简介和标签。 |
 
-对用户可见的最终交付刻意保持为三份：
+Signal Pack 交付可发布文稿和配图制作规格，不生成最终图片，也不自动发布。
+
+完整内容套件包含三份产物：
 
 1. `publish-info`
 2. `article-draft`
 3. `figure-spec`
+
+用户明确缩小范围时，只交付所请求的产物。
 
 ## Showcase
 
@@ -43,22 +47,19 @@ Signal Pack 将它们视为同一个编辑问题：从 **evidence（证据）** 
 
 <table width="100%">
   <tr>
-    <th width="25%" align="center"><a href="https://github.com/KKenny0/Clipplane">Clipplane</a></th>
-    <th width="25%" align="center"><a href="https://github.com/RealKai42/qwerty-learner">Qwerty Learner</a></th>
-    <th width="25%" align="center"><a href="https://github.com/warpstreamlabs/bento">Bento</a></th>
-    <th width="25%" align="center"><a href="https://x.com/cerebras/article/2081828128952095022">GPT-5.6 模型路由 ↗</a></th>
+    <th width="33.33%" align="center"><a href="https://github.com/KKenny0/Clipplane">Clipplane</a></th>
+    <th width="33.33%" align="center"><a href="https://github.com/RealKai42/qwerty-learner">Qwerty Learner</a></th>
+    <th width="33.33%" align="center"><a href="https://x.com/cerebras/article/2081828128952095022">GPT-5.6 模型路由 ↗</a></th>
   </tr>
   <tr>
-    <td width="25%" align="center" valign="top"><a href="assets/showcase/clipplane.jpg"><img src="assets/showcase/clipplane.jpg" alt="Clipplane 内容卡片" width="180" height="240" /></a></td>
-    <td width="25%" align="center" valign="top"><a href="assets/showcase/qwerty-learner.jpg"><img src="assets/showcase/qwerty-learner.jpg" alt="Qwerty Learner 内容卡片" width="180" height="240" /></a></td>
-    <td width="25%" align="center" valign="top"><a href="assets/showcase/bento.jpg"><img src="assets/showcase/bento.jpg" alt="Bento 内容卡片" width="180" height="240" /></a></td>
-    <td width="25%" align="center" valign="top"><a href="assets/showcase/gpt-5-6-routing.jpg"><img src="assets/showcase/gpt-5-6-routing.jpg" alt="GPT-5.6 模型路由内容卡片" width="180" height="240" /></a></td>
+    <td width="33.33%" align="center" valign="top"><a href="assets/showcase/clipplane.jpg"><img src="assets/showcase/clipplane.jpg" alt="Clipplane 内容卡片" width="180" height="240" /></a></td>
+    <td width="33.33%" align="center" valign="top"><a href="assets/showcase/qwerty-learner.jpg"><img src="assets/showcase/qwerty-learner.jpg" alt="Qwerty Learner 内容卡片" width="180" height="240" /></a><br />图 1 预览<br /><a href="examples/qwerty-learner.md">查看完整套件</a></td>
+    <td width="33.33%" align="center" valign="top"><a href="assets/showcase/gpt-5-6-routing.jpg"><img src="assets/showcase/gpt-5-6-routing.jpg" alt="GPT-5.6 模型路由内容卡片" width="180" height="240" /></a></td>
   </tr>
   <tr>
-    <td width="25%" valign="top"><strong>开源工具推荐</strong><br />中文社媒多图轮播<br />将本地优先的网页剪藏工作流与当前可用方式清楚地呈现出来。</td>
-    <td width="25%" valign="top"><strong>开源工具推荐</strong><br />中文社媒多图轮播<br />把功能列表转换为“它适合谁”的明确判断。</td>
-    <td width="25%" valign="top"><strong>产品 / 项目解读</strong><br />中文社媒多图轮播<br />用“一个容器”的隐喻解释为什么一个文件既可以是文档，也可以是软件。</td>
-    <td width="25%" valign="top"><strong>技术解读</strong><br />中文社媒多图轮播<br />基于 <a href="https://x.com/cerebras/article/2081828128952095022">Cerebras 的 GPT-5.6 原始帖文</a>；按信息视野与任务边界区分 Agent 角色，而不是把多 Agent 简化为人头叠加。</td>
+    <td width="33.33%" valign="top"><strong>开源工具推荐</strong><br />中文社媒多图轮播<br />将本地优先的网页剪藏工作流与当前可用方式清楚地呈现出来。</td>
+    <td width="33.33%" valign="top"><strong>开源工具推荐</strong><br />中文社媒多图轮播<br />把功能列表转换为“它适合谁”的明确判断。</td>
+    <td width="33.33%" valign="top"><strong>技术解读</strong><br />中文社媒多图轮播<br />基于 <a href="https://x.com/cerebras/article/2081828128952095022">Cerebras 的 GPT-5.6 原始帖文</a>；按信息视野与任务边界区分 Agent 角色，而不是把多 Agent 简化为人头叠加。</td>
   </tr>
 </table>
 
@@ -82,10 +83,10 @@ npx skills add https://github.com/KKenny0/signal-pack
 ## 使用
 
 ```
-@Signal Pack https://github.com/owner/repo
+$signal-pack https://github.com/owner/repo
 ```
 
-也可以直接提供文件或知识点。可选指定发布平台、语言、画幅、图数，或支持的视觉风格。
+也可以直接提供文件或知识点。可选指定发布平台、语言、画幅、图数，或两种受支持 Style 之一：`Hand-Drawn Cartoon Infographic`、`Halftone Paper-Collage Editorial Assembly System v2`。只需摘要或单篇文章时，直接提出请求即可，不需要调用 Signal Pack。
 
 ## 协议
 
