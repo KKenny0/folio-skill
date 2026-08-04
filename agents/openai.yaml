@@ -1,7 +1,7 @@
 interface:
-  display_name: "Signal Pack"
+  display_name: "Folio"
   short_description: "Create publish-ready copy and visual briefs"
-  default_prompt: "Use $signal-pack to turn this source into publish-ready copy and self-contained visual briefs."
+  default_prompt: "Use $folio to turn this source into publish-ready copy and self-contained visual briefs."
 policy:
   products:
   - chatgpt

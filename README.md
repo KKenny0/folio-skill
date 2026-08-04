@@ -1,18 +1,18 @@
 <div align="center">
 
-# Signal Pack
+# Folio
 
 **Turn sources into publish-ready copy and production-ready visual briefs.**
 
 [中文](README.zh-CN.md) · [Showcase](#showcase) · [Install](#install)
 
-<img src="assets/signal-pack-demo.jpg" alt="Signal Pack: source material becomes a publishable editorial package" width="960" />
+<img src="assets/folio-demo.jpg" alt="Folio: source material becomes a publishable editorial package" width="960" />
 
 </div>
 
-Signal Pack — Source-to-Publish Editorial Skill — turns a URL, file, or knowledge point into coherent copy and visual production briefs.
+Folio — Source-to-Publish Editorial Skill — turns a URL, file, or knowledge point into coherent copy and visual production briefs.
 
-## Why Signal Pack
+## Why Folio
 
 The hard part is rarely finding information. It is turning fragmented sources into something that holds together:
 
@@ -20,7 +20,7 @@ The hard part is rarely finding information. It is turning fragmented sources in
 - an article does not give the visuals a clear job;
 - visual prompts look polished but introduce claims the source never made.
 
-Signal Pack treats those as one editorial problem. It builds a traceable path from **evidence** to **narrative** to **visual direction**—so the finished content has a single point of view instead of three disconnected deliverables.
+Folio treats those as one editorial problem. It builds a traceable path from **evidence** to **narrative** to **visual direction**—so the finished content has a single point of view instead of three disconnected deliverables.
 
 ## What you get
 
@@ -31,7 +31,7 @@ Signal Pack treats those as one editorial problem. It builds a traceable path fr
 | Visual direction | `figure-spec` | One self-contained, production-ready brief per visual: copy, layout, visual mechanism, and factual limits. |
 | Publishing | `publish-info` | A title, summary, and tags ready for the chosen publishing context. |
 
-Signal Pack creates publish-ready copy and visual production briefs. It does not generate final images or publish anything automatically.
+Folio creates publish-ready copy and visual production briefs. It does not generate final images or publish anything automatically.
 
 A complete package contains three deliverables:
 
@@ -43,7 +43,7 @@ When a user explicitly narrows the scope, deliver only the requested artifacts.
 
 ## Showcase
 
-Selected editorial packages made with Signal Pack. Each example is evidence of a different reading job—not just a style sample.
+Selected editorial packages made with Folio. Each example is evidence of a different reading job—not just a style sample.
 
 <table width="100%">
   <tr>
@@ -65,7 +65,7 @@ Selected editorial packages made with Signal Pack. Each example is evidence of a
 
 ## How it stays coherent
 
-Signal Pack has a taste, not a fixed template.
+Folio has a taste, not a fixed template.
 
 - **Evidence boundaries** keep the article and visuals from overstating the source.
 - **Editorial structure** gives every visual one cognitive responsibility, rather than asking every card to say everything.
@@ -77,16 +77,16 @@ That makes a series feel authored while leaving room for the source, audience, a
 ## Install
 
 ```bash
-npx skills add https://github.com/KKenny0/signal-pack
+npx skills add https://github.com/KKenny0/folio-skill
 ```
 
 ## Use
 
 ```
-$signal-pack https://github.com/owner/repo
+$folio https://github.com/owner/repo
 ```
 
-You can also provide a file or topic directly. Optionally specify the platform, language, aspect ratio, number of visuals, or one of the two supported styles: `Hand-Drawn Cartoon Infographic` or `Halftone Paper-Collage Editorial Assembly System v2`. For a summary or a single article, ask for it directly; Signal Pack is not needed.
+You can also provide a file or topic directly. Optionally specify the platform, language, aspect ratio, number of visuals, or one of the two supported styles: `Hand-Drawn Cartoon Infographic` or `Halftone Paper-Collage Editorial Assembly System v2`. For a summary or a single article, ask for it directly; Folio is not needed.
 
 ## License
 
