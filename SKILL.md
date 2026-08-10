@@ -12,12 +12,12 @@ description: 仅在用户明确要求文章与配图、多图轮播、公众号�
 - 仅在用户明确要完整内容套件、文章与配图、多图轮播、公众号图文套件或配图规格时隐式使用；显式 `$folio` 总是使用。
 - 只要摘要、单篇文章或学习笔记时，不隐式使用本 Skill。
 - 默认交付三产物。只有用户使用“只要”“不要”“无需”“仅输出”等明确限定或排除措辞时，才缩小交付范围；仅列出文章与配图等所需内容，不视为排除未点名的默认产物。
-- 输入可以是 URL、文件或文字知识点，并可指定平台、语言、画幅、图数、内容类型和 Style。当前只支持 `Hand-Drawn Cartoon Infographic` 与 `Halftone Paper Collage`。
+- 输入可以是 URL、文件或文字知识点，并可指定平台、语言、画幅、图数、内容类型和 Style。当前只支持 `Hand-Drawn Infographic` 与 `Halftone Paper Collage`。
 
 ## 条件读取
 
 1. 所有请求读取 [references/output-contract.md](references/output-contract.md)。
-2. 只有请求交付配图规格（例如 `figure-spec`、配图规格、多图轮播或文章配图）时，读取 [references/style-router.md](references/style-router.md)、所选 Style 的 Profile（`Hand-Drawn Cartoon Infographic` 读取 [references/hand-drawn-infographic.md](references/hand-drawn-infographic.md)；`Halftone Paper Collage` 读取 [references/halftone-paper-collage.md](references/halftone-paper-collage.md)）和 [references/figure-spec-qa.md](references/figure-spec-qa.md)。
+2. 只有请求交付配图规格（例如 `figure-spec`、配图规格、多图轮播或文章配图）时，读取 [references/style-router.md](references/style-router.md)、所选 Style 的 Profile（`Hand-Drawn Infographic` 读取 [references/hand-drawn-infographic.md](references/hand-drawn-infographic.md)；`Halftone Paper Collage` 读取 [references/halftone-paper-collage.md](references/halftone-paper-collage.md)）和 [references/figure-spec-qa.md](references/figure-spec-qa.md)。
 3. 只有项目或工具内容读取 [references/project-recommendation.md](references/project-recommendation.md)。
 
 ## 硬约束
@@ -27,10 +27,11 @@ description: 仅在用户明确要求文章与配图、多图轮播、公众号�
 - 来源、revision 或访问日期、核查日期和不确定性写进文章的自然尾注。没有可核查来源时明确写“未提供可核查来源”，不得把模型记忆伪装为来源事实。
 - `article-draft` 可独立发布，按主题组织而不按图片顺序组织。
 - 每张 `figure-spec` 同时包含「参考图片内容」和「配图规格」，任取一张都能独立进入视觉生产。
-- 用户指定两种受支持的 Style 时直接服从；未指定时按核心意义由场景动作还是结构关系承载来自动选择，并用 removal test 说明理由。同一套图默认保持同一 Style、比例和建议画布。用户指定其他 Style 时，不静默模拟或发明临时 Profile；说明当前支持范围，并请其选择其中一种。
+- 用户指定一种受支持的 Style 时直接服从；同一套图只使用一种 Style、比例和建议画布。用户要求混用两种 Style 时，说明统一视觉系统无法跨越两种媒介，请其选择一种，或拆成两套分别生成。未指定时按连续手绘表达还是离散纸片组装更能承载整套内容来自动选择，并说明另一种 Style 会造成什么额外转换。用户指定其他 Style 时，不静默模拟或发明临时 Profile；说明当前支持范围，并请其选择其中一种。
 - 将历史输入名 `Halftone Paper-Collage Editorial Assembly System v2` 视为 `Halftone Paper Collage`；只兼容输入，所有用户产物均输出新名称。
+- 将历史输入名 `Hand-Drawn Cartoon Infographic` 视为 `Hand-Drawn Infographic`；只兼容输入，所有用户产物均输出新名称。
 - 不伪造第一人称体验；只有用户提供的真实体验、笔记或结果才能写成作者体验。
-- 内部的 Card Responsibility Brief、Suite Lock、核查记录和 QA 记录不是用户产物。
+- 内部的 Card Responsibility Brief、Suite Lock、核查记录和 QA 记录不是独立用户产物；Suite Lock 的具体值必须作为 `figure-spec` 的「统一视觉系统」公开，并逐图继承。
 - Folio 不生成最终图片、不自动发布，也不生成或编排动态资产；动态媒体生产交给专门的下游 Skill。
 
 ## 标签体系
@@ -58,20 +59,20 @@ description: 仅在用户明确要求文章与配图、多图轮播、公众号�
 
 ### Step 3：规划视觉（仅请求 `figure-spec` 时）
 
-先确认来源是否为可命名实体（书、项目、论文、产品、课程等），并只根据文章与来源记录其规范名称、实体类型和可验证描述；证据不足时使用更窄的中性描述，不推断“开源”“书”“论文”等身份。有明确命名来源时，把“规范名称 · 实体类型”定为整套最小来源标识，其中实体类型必须先经来源核验；文章的来源、核查日期和不确定性尾注不自动进入该标识。再按 `style-router.md` 决定覆盖。内部为每张图建立 Card Responsibility Brief：唯一认知目标、核心主张、信息关系、必需文字、来源身份锚点、内容解释锚点、事实边界和空白责任。再为整套图建立 Suite Lock，锁定来源身份连续性、标题与正文字体性格、颜色语义、材质与景深、逐图宏观构图轮廓。不要把 Brief 或 Suite Lock 作为独立文件输出。
+先确认来源是否为可命名实体（书、项目、论文、产品、课程等），并只根据文章与来源记录其规范名称、实体类型和可验证描述；证据不足时使用更窄的中性描述，不推断“开源”“书”“论文”等身份。有明确命名来源时，把“规范名称 · 实体类型”定为整套最小来源标识，其中实体类型必须先经来源核验；文章的来源、核查日期和不确定性尾注不自动进入该标识。再按 `style-router.md` 决定覆盖。内部为每张图建立 Card Responsibility Brief：唯一认知目标、核心主张、信息关系、必需文字、来源身份锚点、内容解释锚点、事实边界和空白责任。再为整套图建立 Suite Lock：把 Style、解释机制和视觉系统分开决定。Style Profile 只规定手绘线条或纸张拼贴等媒介语法；每张图的「构图与视觉机制」选择人物场景、对象演示、注释图、流程、空间结构或对照等内容载体；Suite Lock 确定唯一背景基底、颜色角色及参考色、材质与纹理、线条与笔触、光影、标题与正文字体性格，以及适用的插画对象、人物或纸张世界连续性。选择背景前，内部比较至少三个在色温或明度上有明显差异的候选，并按用户指定、可核查来源视觉、平台环境、内容语气和文字对比依次选择；把最终选择依据写进「统一视觉系统」。不得因为 Style 是手绘或拼贴就默认暖米白、羊皮纸或复古纸。Style Profile 规定视觉语法，Suite Lock 为本套内容选定具体视觉值；同时规划互不重复的逐图宏观构图轮廓。不要把 Brief、候选比较或 Suite Lock 作为独立文件输出，但把最终固定值逐项完整写入 `figure-spec` 的「统一视觉系统」。
 
 ### Step 4：选择 Style 与画幅（仅请求 `figure-spec` 时）
 
-1. 用户明确指定两种受支持的 Style 时直接采用；指定其他 Style 时说明支持范围并请求选择，不生成临时 Profile。
-2. 否则按 `style-router.md` 自动选择；理由必须说明认知目标、核心意义载体，以及移除关键机制后损失什么理解。
+1. 用户明确指定一种受支持的 Style 时直接采用；要求混用两种 Style 时，请其选择一种或拆成两套；指定其他 Style 时说明支持范围并请求选择，不生成临时 Profile。
+2. 否则按 `style-router.md` 在整套层面自动选择；分别判断连续手绘表达与离散纸片组装能否自然承载多数卡片，不能按人物是否出现、技术题材或信息关系名称裁决。理由必须说明所选媒介的表达优势，以及另一种媒介会造成的额外转换。
 3. 画幅优先级为用户指定 > 平台要求 > Folio 默认；Style 不决定画幅。没有用户或平台要求时，两种 Style 均默认 `3:4` 竖版。
 4. 为所选比例给出严格等比的建议画布；3:4 竖版使用 `1536×2048 px`。建议画布是跨工具交接值，不得用与目标比例冲突的常见尺寸代替。
 
 ### Step 5：派生用户请求的 publish-info 和 / 或 figure-spec
 
-从 `article-draft` 派生用户请求的标题、简介、标签和 / 或配图规格。请求 `figure-spec` 时，每张图必须重复实际图上文字、完整 Style、画幅、建议画布、下游执行要求、语言、认知目标、核心主张、信息关系、构图、视觉锚点、色彩材质、安全区、禁区及完整生图指令。视觉锚点在现有字段内区分来源身份锚点与内容解释锚点；有明确命名来源时，每张图还要在「必要署名 / 限制」中提供经核验的最小来源标识。图中所有可读标签（包括分类、步骤、按钮、卡片和示意物标签）也必须能在文章中逐字或等义定位；文章未给出具体条目时，用无文字示意物，不得为构图补造示例。禁止“同上”“沿用前图”等上下文依赖。
+从 `article-draft` 派生用户请求的标题、简介、标签和 / 或配图规格。请求 `figure-spec` 时，文件头必须给出具体的「统一视觉系统」；每张图必须重复实际图上文字、完整 Style、画幅、建议画布、下游执行要求、语言、认知目标、核心主张、信息关系、构图、视觉锚点、统一视觉系统的全部固定值、本图允许变化、安全区、禁区及完整生图指令。视觉锚点在现有字段内区分来源身份锚点与内容解释锚点；有明确命名来源时，每张图还要在「必要署名 / 限制」中提供经核验的最小来源标识。图中所有可读标签（包括分类、步骤、按钮、卡片和示意物标签）也必须能在文章中逐字或等义定位；文章未给出具体条目时，用无文字示意物，不得为构图补造示例。禁止“同上”“沿用前图”等上下文依赖。
 
-完整生图指令可以合并字段，但不得改写、增强或新增字段中的事实。Style 字段使用规范名称；完整生图指令使用与输出语言一致的自然风格描述，不把规范英文 Style 名称当作风格前缀，也不输出内部 Profile 名称或版本号，并按 `output-contract.md` 的画布模板首尾重申目标比例。提示词只能提高 prompt-only 工具的遵循率；不得声称它能覆盖工具自身固定的输出比例。
+每张图的「色彩、材质与氛围」和完整生图指令必须逐项完整重复统一视觉系统的背景、选择依据、颜色角色、材质、笔触、光影、字体性格与适用的连续性约束；允许为自然语序改变字段连接方式，不得遗漏或改变固定值。「本图变化」可以调整构图重心、既有强调色的使用比例，以及所选 Style 的表达机制：Hand-Drawn 可改变对象、注释、动作或空间组织，人物不是必需项；Halftone 可改变主导编辑操作。不得引入新背景色族、交换颜色语义或更换视觉媒介。完整生图指令可以合并字段，但不得改写、增强或新增字段中的事实。Style 字段使用规范名称；完整生图指令使用与输出语言一致的自然风格描述，不把规范英文 Style 名称当作风格前缀，也不输出内部 Profile 名称或版本号，并按 `output-contract.md` 的画布模板首尾重申目标比例。参考色是跨工具视觉锚点，不是像素一致性承诺；提示词只能提高 prompt-only 工具的遵循率，不得声称它能覆盖工具自身固定的输出比例或保证不同工具像素级一致。
 
 ### Step 6：核查与 QA
 

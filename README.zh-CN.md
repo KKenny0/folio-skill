@@ -17,7 +17,7 @@
 | **类别** | Agent Skill · 编辑内容流水线 |
 | **输入** | URL、本地文件或知识点文本 |
 | **默认输出** | `publish-info` · `article-draft` · `figure-spec` |
-| **支持的 Style** | Hand-Drawn Cartoon Infographic · Halftone Paper Collage |
+| **支持的 Style** | Hand-Drawn Infographic · Halftone Paper Collage |
 | **安装** | `npx skills add https://github.com/KKenny0/folio-skill` |
 | **协议** | MIT |
 
@@ -88,7 +88,7 @@ Folio 有统一的 taste，但不是固定模板。
 
 - **事实边界**：避免文章与图像夸大或改写来源。
 - **编辑结构**：每张图只承担一个认知任务，而不是试图在一张卡里塞进全部信息。
-- **风格路由**：根据核心意义由场景动作还是结构关系承载，在手绘解释与纸张拼贴之间选择，而不是按题材标签分类。
+- **风格路由**：根据整套内容更适合连续手绘表达还是离散纸片组装来选择，不按题材或人物是否出现分类。
 - **Figure Spec QA**：在交付前检查可读性、层级、安全区、图文碰撞与事实限制。
 
 这让系列内容有连续的作者感，同时仍然能随来源、受众与内容类型而变化。
@@ -115,7 +115,7 @@ $folio "长上下文里的 prefix cache"
 $folio https://example.com/post -- 平台: 公众号 语言: 中文 图数: 4
 ```
 
-可选：发布平台、语言、画幅、图数，以及两种受支持 Style 之一：`Hand-Drawn Cartoon Infographic`、`Halftone Paper Collage`。
+可选：发布平台、语言、画幅、图数，以及两种受支持 Style 之一：`Hand-Drawn Infographic`、`Halftone Paper Collage`。
 
 画幅与 Style 解耦。用户和发布平台都未指定时，两种 Style 均默认使用 `3:4` 竖版画布（`1536×2048 px`）。
 
@@ -136,7 +136,7 @@ $folio https://example.com/post -- 平台: 公众号 语言: 中文 图数: 4
 不会。它交付可直接进入视觉生产的 `figure-spec`。最终成图由你完成——例如把每张图的规格（或完整生图指令）交给 Codex 的 `imagegen`、ChatGPT 的配图，或其他生图工具。
 
 **支持哪些视觉风格？**  
-两种：Hand-Drawn Cartoon Infographic，以及 Halftone Paper Collage。其他风格不会被静默模拟。
+两种：Hand-Drawn Infographic，以及 Halftone Paper Collage。手绘图可以使用对象、注释、流程、空间或确有内容职责的人物，人物不是必需项。其他风格不会被静默模拟。
 
 **什么时候不该用 Folio？**  
 只要摘要、学习笔记或单篇文章时；或者需要动态/视频生产时。

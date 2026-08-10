@@ -17,7 +17,7 @@
 | **Category** | Agent Skill · editorial content pipeline |
 | **Input** | URL, local file, or topic text |
 | **Default output** | `publish-info` · `article-draft` · `figure-spec` |
-| **Supported styles** | Hand-Drawn Cartoon Infographic · Halftone Paper Collage |
+| **Supported styles** | Hand-Drawn Infographic · Halftone Paper Collage |
 | **Install** | `npx skills add https://github.com/KKenny0/folio-skill` |
 | **License** | MIT |
 
@@ -88,7 +88,7 @@ Folio has a taste, not a fixed template.
 
 - **Evidence boundaries** keep the article and visuals from overstating the source.
 - **Editorial structure** gives every visual one cognitive responsibility, rather than asking every card to say everything.
-- **Style routing** chooses between scene-led hand-drawn explanation and structure-led paper collage based on what visually carries the meaning—not on topic labels alone.
+- **Style routing** chooses between continuous hand-drawn expression and modular paper assembly based on the medium the suite needs, not on topic labels or whether a person appears.
 - **Figure-spec QA** checks legibility, hierarchy, safe areas, visual-text collisions, and factual limits before the specification is delivered.
 
 That makes a series feel authored while still following the source, audience, and content type.
@@ -115,7 +115,7 @@ $folio "prefix caching for long agent contexts"
 $folio https://example.com/post -- platform: WeChat language: zh figures: 4
 ```
 
-Optional controls: publishing platform, language, aspect ratio, number of visuals, and style (`Hand-Drawn Cartoon Infographic` or `Halftone Paper Collage`).
+Optional controls: publishing platform, language, aspect ratio, number of visuals, and style (`Hand-Drawn Infographic` or `Halftone Paper Collage`).
 
 Aspect ratio is independent of style. If neither you nor the publishing platform specifies one, Folio defaults both styles to a `3:4` portrait canvas (`1536×2048 px`).
 
@@ -136,7 +136,7 @@ It keeps evidence, narrative, and visual direction on one factual boundary, so i
 No. It writes production-ready `figure-spec` briefs. You generate finals yourself—e.g. with Codex `imagegen`, ChatGPT image generation, or another image tool—by feeding each brief (or its full image-generation instruction) into that tool.
 
 **Which visual styles are supported?**  
-Two: Hand-Drawn Cartoon Infographic, and Halftone Paper Collage. Other styles are not silently simulated.
+Two: Hand-Drawn Infographic, and Halftone Paper Collage. Hand-drawn visuals may use objects, annotations, flows, spaces, or people when the content calls for them; people are not required. Other styles are not silently simulated.
 
 **When should I not use Folio?**  
 When you only need a summary, learning notes, or a single article—or when you need motion/video production.
