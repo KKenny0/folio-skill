@@ -1,0 +1,7 @@
+# Human Bitmap QA approved 2026-08-16
+# Checked: exact 3:4 canvas, visible-text whitelist, information relationship,
+# House color semantics, no visible paper shadow, and no white text on orange.
+66974a259ac0c50f99420dddbdd9fbdcbc7e7f381f5e3a3f03212adace5863a2  srt-whiteboard-01.jpg
+f44d36ba43670cb3e1b58548c19554a400948cc74e027691c12b5f07bfbfe5c7  srt-whiteboard-02.jpg
+b457135d4ff4302b6acefc04f283396bbd35b27639db98397b1b9a3c03d1a1b2  srt-whiteboard-03.jpg
+651605ed83f0bc4b7675936576681a701789b61c344f0afd0eef090685bcc320  srt-whiteboard-04.jpg

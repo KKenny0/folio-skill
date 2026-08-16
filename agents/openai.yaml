@@ -1,7 +1,7 @@
 interface:
   display_name: "Folio"
-  short_description: "Create publish-ready copy and visual briefs"
-  default_prompt: "Use $folio to turn this source into publish-ready copy and self-contained visual briefs."
+  short_description: "Create social-ready copy and visual briefs"
+  default_prompt: "Use $folio for social copy and visual briefs by default. Return only article-draft for a standalone article request; include all three outputs only for a combined or full package."
 policy:
   products:
   - chatgpt
