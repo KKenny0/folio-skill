@@ -1,6 +1,6 @@
 <div align="center">
 
-# Folio
+# Social Content Kit
 
 **Turn sources into social-ready copy and production-ready visual briefs.**
 
@@ -8,7 +8,7 @@
 
 </div>
 
-**Folio** is an [Agent Skill](https://github.com/KKenny0/folio-skill) for source-to-social editorial packaging. Given a **URL**, **file**, or **knowledge point**, it produces platform-ready publishing copy and self-contained visual production briefs that share one verified content boundary. A standalone article is generated only when explicitly requested.
+**Social Content Kit** is an [Agent Skill](https://github.com/KKenny0/social-content-kit-skill) for source-to-social editorial packaging. Given a **URL**, **file**, or **knowledge point**, it produces platform-ready publishing copy and self-contained visual production briefs that share one verified content boundary. A standalone article is generated only when explicitly requested.
 
 | | |
 | --- | --- |
@@ -17,10 +17,10 @@
 | **Default output** | `publish-info` · `figure-spec` |
 | **Article, on request** | `article-draft` |
 | **Visual identity** | Folio Editorial Sketch · one fixed house style |
-| **Install** | `npx skills add https://github.com/KKenny0/folio-skill` |
+| **Install** | `npx skills add https://github.com/KKenny0/social-content-kit-skill` |
 | **License** | MIT |
 
-## Why Folio
+## Why Social Content Kit
 
 The hard part is rarely finding information. It is turning fragmented sources into social content without letting the copy and visuals drift apart:
 
@@ -28,7 +28,7 @@ The hard part is rarely finding information. It is turning fragmented sources in
 - each card repeats information instead of having one clear cognitive job;
 - visual prompts look polished but introduce claims the source never made.
 
-Folio treats those as one editorial problem. It builds an internal verified content core, then derives publishing copy and visual briefs from that same source of truth. An article is optional instead of a mandatory intermediate deliverable; long, short, and very short only control its length.
+Social Content Kit treats those as one editorial problem. It builds an internal verified content core, then derives publishing copy and visual briefs from that same source of truth. An article is optional instead of a mandatory intermediate deliverable; long, short, and very short only control its length.
 
 ## What you get
 
@@ -52,11 +52,11 @@ Ask for a “full content package,” “article and visuals,” or a WeChat lon
 
 Explicit limits such as “only,” “without,” or “do not include” are followed exactly.
 
-**Folio does not** generate final images, auto-publish, or produce motion/video assets. Each `figure-spec` is self-contained: paste its full image-generation instruction into Codex `imagegen`, ChatGPT image generation, or another image tool.
+**Social Content Kit does not** generate final images, auto-publish, or produce motion/video assets. Each `figure-spec` is self-contained: paste its full image-generation instruction into Codex `imagegen`, ChatGPT image generation, or another image tool.
 
-## When to use Folio
+## When to use Social Content Kit
 
-| Use Folio when… | Skip Folio when… |
+| Use Social Content Kit when… | Skip Social Content Kit when… |
 | --- | --- |
 | You want a social carousel or image-card series with platform-ready post copy | You only want a summary, notes, or a plain single article |
 | You are packaging a project/tool recommendation for adoption decisions | You need final rendered images or auto-posting |
@@ -88,7 +88,7 @@ One validated social suite made from the real [srt-whiteboard-animation](https:/
 
 ## How it stays coherent
 
-Folio has a taste, not a fixed template.
+Social Content Kit has a taste, not a fixed template.
 
 - **Evidence boundaries** keep publishing copy and visuals from overstating the source.
 - **Editorial structure** gives every visual one cognitive responsibility instead of asking every card to say everything.
@@ -102,7 +102,7 @@ That makes a series feel authored while still following the source, audience, an
 ## Install
 
 ```bash
-npx skills add https://github.com/KKenny0/folio-skill
+npx skills add https://github.com/KKenny0/social-content-kit-skill
 ```
 
 Works with agent runtimes that support the Skills format, such as Claude Code and compatible `skills add` hosts.
@@ -110,43 +110,47 @@ Works with agent runtimes that support the Skills format, such as Claude Code an
 ## Use
 
 ```text
-$folio https://github.com/owner/repo
+$social-content-kit https://github.com/owner/repo
 ```
 
 This default invocation produces `publish-info` and `figure-spec`. Other useful shapes:
 
 ```text
-$folio ./notes/meeting.md
-$folio "prefix caching for long agent contexts"
-$folio https://example.com/post -- platform: WeChat language: zh figures: 4
-$folio https://example.com/post -- full package with article and 4 visuals
+$social-content-kit ./notes/meeting.md
+$social-content-kit "prefix caching for long agent contexts"
+$social-content-kit https://example.com/post -- platform: WeChat language: zh figures: 4
+$social-content-kit https://example.com/post -- full package with article and 4 visuals
 ```
 
 Optional controls: publishing platform, language, aspect ratio, number of visuals, and requested deliverables. Visual style is intentionally not a control.
 
-If neither you nor the publishing platform specifies an aspect ratio, Folio defaults to a `3:4` portrait canvas (`1536×2048 px`).
+If neither you nor the publishing platform specifies an aspect ratio, Social Content Kit defaults to a `3:4` portrait canvas (`1536×2048 px`).
 
-For a plain summary or single article, ask the agent directly—Folio is not required.
+For a plain summary or single article, ask the agent directly—Social Content Kit is not required.
 
 ## FAQ
 
-**What is Folio?**
+**What is Social Content Kit?**
 
 An Agent Skill that turns a URL, file, or topic into platform-ready publishing copy and self-contained visual production briefs.
+
+**Was this Skill previously called Folio?**
+
+Yes. Starting with v0.9.0, the public Skill ID is `$social-content-kit` and the repository is `social-content-kit-skill`. Reinstall the Skill to update the invocation name. Folio Editorial Sketch remains the fixed visual identity.
 
 **What is generated by default?**
 
 `publish-info` (title, post copy, source note, tags) and `figure-spec` (one self-contained visual brief per card).
 
-**Can Folio still write a standalone article?**
+**Can Social Content Kit still write a standalone article?**
 
-Yes. In an explicit `$folio` request, asking for a standalone article returns `article-draft` only. Ask for an article-and-visual, full-content, or WeChat long-form package when you want all three deliverables.
+Yes. In an explicit `$social-content-kit` request, asking for a standalone article returns `article-draft` only. Ask for an article-and-visual, full-content, or WeChat long-form package when you want all three deliverables.
 
 **What keeps the deliverables fact-aligned without a visible article?**
 
-Folio first builds an internal verified content core containing sources, claims, exact values, limitations, and uncertainty. Every requested deliverable is derived from it.
+Social Content Kit first builds an internal verified content core containing sources, claims, exact values, limitations, and uncertainty. Every requested deliverable is derived from it.
 
-**Does Folio generate images?**
+**Does Social Content Kit generate images?**
 
 No. It writes production-ready `figure-spec` briefs. Generate final images with Codex `imagegen`, ChatGPT image generation, or another image tool.
 

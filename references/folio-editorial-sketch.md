@@ -1,6 +1,6 @@
 # Folio Editorial Sketch
 
-Folio 只使用这一套公开视觉身份。它不是 Hand-Drawn Infographic 与 Halftone Paper Collage 的混合选项，而是稳定的编辑图解系统：编辑层级负责阅读秩序，手绘关系负责解释，纸片只在承担边界或转化时介入，半调只作局部强调。
+Social Content Kit 只使用这一套公开视觉身份。它不是 Hand-Drawn Infographic 与 Halftone Paper Collage 的混合选项，而是稳定的编辑图解系统：编辑层级负责阅读秩序，手绘关系负责解释，纸片只在承担边界或转化时介入，半调只作局部强调。
 
 ## House Lock
 
@@ -56,7 +56,7 @@ Folio 只使用这一套公开视觉身份。它不是 Hand-Drawn Infographic �
 
 ## 套图一致性与变化
 
-House Lock 跨所有 Folio 输出固定。每次任务的 Suite Lock 只记录：
+House Lock 跨所有 Social Content Kit 输出固定。每次任务的 Suite Lock 只记录：
 
 - 来源身份锚点和最小来源标识；
 - 重复对象、必要人物或来源资产的造型连续性；

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic repository checks for the Folio skill package."""
+"""Deterministic repository checks for the Social Content Kit skill package."""
 
 from __future__ import annotations
 
@@ -16,6 +16,7 @@ TEXT_FILES = [
     ROOT / "SKILL.md",
     ROOT / "README.md",
     ROOT / "README.zh-CN.md",
+    ROOT / "agents" / "openai.yaml",
     *sorted((ROOT / "references").glob("*.md")),
     *sorted((ROOT / "examples").glob("*.md")),
     *sorted((ROOT / "evals").glob("*.md")),
@@ -50,8 +51,8 @@ def validate_frontmatter() -> None:
     match = re.match(r"\A---\n(.*?)\n---\n", text, re.DOTALL)
     require(match is not None, "SKILL.md must start with YAML frontmatter")
     frontmatter = match.group(1)
-    require(re.search(r"^name:\s*folio\s*$", frontmatter, re.MULTILINE) is not None,
-            "frontmatter name must be folio")
+    require(re.search(r"^name:\s*social-content-kit\s*$", frontmatter, re.MULTILINE) is not None,
+            "frontmatter name must be social-content-kit")
     description = re.search(r"^description:\s*(.+)$", frontmatter, re.MULTILINE)
     require(description is not None and description.group(1).strip(),
             "frontmatter description must be non-empty")
@@ -95,10 +96,25 @@ def validate_contract_language() -> None:
     profile = read(ROOT / "references/folio-editorial-sketch.md")
     qa = read(ROOT / "references/figure-spec-qa.md")
     contract = read(ROOT / "references/output-contract.md")
+    agents = read(ROOT / "agents/openai.yaml")
+
+    require('display_name: "Social Content Kit"' in agents,
+            "agents metadata must use the Social Content Kit display name")
+    require("$social-content-kit" in agents,
+            "agents default prompt must use the new explicit invocation")
+    require("KKenny0/social-content-kit-skill" in corpus,
+            "public documentation must use the renamed repository")
+    require("KKenny0/folio-skill" not in corpus,
+            "old repository URL must not remain in package text")
+    require(re.search(r"\$folio(?:\s|`|$)", corpus) is None,
+            "old explicit $folio invocation must not remain")
+    require("这个 Skill 以前叫 Folio 吗" in read(ROOT / "README.zh-CN.md") and
+            "Was this Skill previously called Folio" in read(ROOT / "README.md"),
+            "both READMEs must explain the v0.9.0 rename")
 
     require("长文、短文或极短文只决定篇幅，不改变产物资格" in skill,
             "SKILL.md must make article length independent from eligibility")
-    require("当回合只说明 Folio 为保持跨帖识别度只提供固定视觉身份，并请求确认" in skill and
+    require("当回合只说明 Social Content Kit 为保持跨帖识别度只提供固定视觉身份，并请求确认" in skill and
             "不获取来源、不建立内容核心、不交付部分产物" in skill,
             "style-conflict preflight must stop before source processing")
     require("只有集合包含 `figure-spec` 时才检查面向生成图的肯定式 Style 指令" in skill,
@@ -310,7 +326,7 @@ def main() -> None:
     validate_contract_language()
     validate_example_prompts()
     validate_showcase()
-    print("PASS: Folio contracts, prompts, links, and hash-bound Showcase Bitmap QA are valid.")
+    print("PASS: Social Content Kit contracts, prompts, links, and hash-bound Showcase Bitmap QA are valid.")
 
 
 if __name__ == "__main__":

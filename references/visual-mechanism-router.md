@@ -1,6 +1,6 @@
 # Visual Mechanism Router
 
-Folio 的 Style 固定为 `Folio Editorial Sketch`，不再选择媒介风格。视觉路由只决定每张图用什么关系机制解释内容；所有机制都必须通过同一 House Lock 渲染。
+Social Content Kit 的 Style 固定为 `Folio Editorial Sketch`，不再选择媒介风格。视觉路由只决定每张图用什么关系机制解释内容；所有机制都必须通过同一 House Lock 渲染。
 
 ## 决策顺序
 
@@ -83,7 +83,7 @@ House Lock 已由 `folio-editorial-sketch.md` 固定，Suite Lock 不再选择�
 
 ## 画幅
 
-优先级为用户指定 > 平台要求 > Folio 默认。画幅不改变 Style。
+优先级为用户指定 > 平台要求 > Social Content Kit 默认。画幅不改变 Style。
 
 - 没有用户或平台要求时使用 `3:4` 竖版，建议画布 `1536×2048 px`。
 - 同一套图统一比例与建议画布；每条完整 Prompt 重复比例、方向和像素值。
