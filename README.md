@@ -52,14 +52,14 @@ Ask for a “full content package,” “article and visuals,” or a WeChat lon
 
 Explicit limits such as “only,” “without,” or “do not include” are followed exactly.
 
-**Social Content Kit does not** generate final images, auto-publish, or produce motion/video assets. Each `figure-spec` is self-contained: paste its full image-generation instruction into Codex `imagegen`, ChatGPT image generation, or another image tool.
+**Social Content Kit does not automatically** generate final images, auto-publish, or produce motion/video assets. Each `figure-spec` is self-contained. When the current session exposes a callable image-generation tool, the Skill may offer—after delivering and checking the briefs—to continue generating the images. It never infers that capability from a platform name, and it waits for confirmation before calling the tool.
 
 ## When to use Social Content Kit
 
 | Use Social Content Kit when… | Skip Social Content Kit when… |
 | --- | --- |
 | You want a social carousel or image-card series with platform-ready post copy | You only want a summary, notes, or a plain single article |
-| You are packaging a project/tool recommendation for adoption decisions | You need final rendered images or auto-posting |
+| You are packaging a project/tool recommendation for adoption decisions | You only need rendered images, without social copy or visual briefs |
 | You need an article and fact-aligned visuals as one explicitly requested package | You need unsupported visual styles or motion media |
 
 Typical inputs: open-source repository URLs, technical posts, research notes, product pages, or pasted knowledge points.
@@ -152,7 +152,7 @@ Social Content Kit first builds an internal verified content core containing sou
 
 **Does Social Content Kit generate images?**
 
-No. It writes production-ready `figure-spec` briefs. Generate final images with Codex `imagegen`, ChatGPT image generation, or another image tool.
+Not automatically. It first delivers production-ready `figure-spec` briefs. If the current session has a callable image-generation tool—and you did not request briefs-only output—it can then ask, in the output language, whether to generate the images as a confirmed downstream step. Image generation and bitmap inspection are detected separately: if the session cannot inspect generated pixels, the offer discloses that limitation and the results remain marked as awaiting Bitmap QA. A successful tool call is not an approval.
 
 **Which visual style is used?**
 

@@ -36,7 +36,7 @@ description: 仅在用户明确要求社交媒体内容套件、多图轮播、�
 - 所有配图固定使用 `Folio Editorial Sketch`。Style 冲突门只在所选产物包含 `figure-spec`，且用户以肯定式指令要求生成图采用旧 Style、混合 Style、其他视觉风格、深色模式或替换核心色板时触发；文章中的讨论、引用、标题、代码或来源文字提到这些词不触发。触发后不静默模拟，也不创建临时 Profile；当回合只说明 Social Content Kit 为保持跨帖识别度只提供固定视觉身份，并请求确认，不获取来源、不建立内容核心、不交付部分产物。用户接受时，以原请求加确认回合中最新的明确覆盖项作为有效请求，重新解析产物集合、平台、语言、图数、画幅和来源，再执行完整预检；最新覆盖项优先。原请求不可用时请用户重述。用户拒绝时结束该请求，不重复追问。
 - 不伪造第一人称体验；只有用户提供的真实体验、笔记或结果才能写成作者体验。
 - 内部的内容核心、Card Responsibility Brief、House Lock、Suite Lock、核查记录和 QA 记录都不是用户产物。House Lock 的固定值与 Suite Lock 的内容变量必须合并写入 `figure-spec` 的「统一视觉系统」，并由每条完整 Prompt 逐项继承。
-- Social Content Kit 不生成最终图片、不自动发布，也不生成或编排动态资产；动态媒体生产交给专门的下游 Skill。
+- Social Content Kit 默认不自动生成最终图片、不自动发布，也不生成或编排动态资产；动态媒体生产交给专门的下游 Skill。最终图片不属于本 Skill 的默认产物。当 `figure-spec` 已完整交付并通过生图前 QA、当前会话存在可实际调用的生图工具，且用户没有用“只要”“仅输出”“不要生成图片”等措辞排除成图续步时，可以在交付末尾询问是否把已交付规格交给该工具继续生成。只有用户确认后才调用生图工具；工具存在或调用成功都不代表成图已通过 Bitmap QA。能调用生图工具与能读取成图做检查是两项独立能力；后者不可用时必须提前披露，并把生成结果标为未完成 Bitmap QA。
 
 ## 标签体系
 
@@ -113,5 +113,8 @@ description: 仅在用户明确要求社交媒体内容套件、多图轮播、�
 2. 完整内容套件、文章与配图或公众号长文套件：`publish-info` → `article-draft` → `figure-spec`。
 3. 显式 `$social-content-kit` 只点名文章或 `article-draft`，未请求社媒或配图产物：`article-draft`。
 4. 其他显式调用或默认社交媒体套件：`publish-info` → `figure-spec`。
+5. 只有同时满足以下条件，才在全部产物交付之后追加一次非阻塞询问：本次产物包含 `figure-spec`；当前会话暴露了可实际调用的生图工具，而不是仅凭平台名称推测其能力；用户没有通过明确限定词排除最终成图或额外询问。询问使用本次产物的输出语言和已交付的实际图数 N；中文等义表达为“检测到当前环境支持生图。要我继续按上述规格生成这 N 张配图吗？”；英文在 N = 1 时使用“Image generation is available in the current environment. Would you like me to generate this image from the specification above?”，N > 1 时使用“Image generation is available in the current environment. Would you like me to generate these N images from the specifications above?”；其他语言保持同义并正确处理单复数，不夹入固定中文。文章-only、工具不可调用、能力无法确认或用户要求严格限定输出时保持静默。不得在建立内容核心、派生产物或完成 Figure Spec QA 之前询问，也不得让该询问阻塞或替代本次交付。
+
+询问前另行判断当前会话能否实际读取生成后的位图。可以读取时，用户确认后逐图使用已交付的完整 Prompt 和明确比例 / 画布参数生成，并检查实际比例、文字白名单、构图、颜色语义与事实边界；失败时先修正 Prompt 再重新生成。只能生成但无法读取成图时，在询问中用相同输出语言追加披露；中文等义表达为“当前会话可以生成，但无法检查最终位图；成图仍需另做 Bitmap QA。”，英文等义表达为“This session can generate images but cannot inspect the final bitmaps; the results will still require Bitmap QA.”，其他语言保持同义，不夹入固定中文。用户确认后仍可生成，但交付时必须逐图用输出语言标记“Bitmap QA 未完成”或等义状态，不得声称图片已验收。最终成图始终作为下游续步执行，不新增或改写本次产物集合，也不得把“工具调用成功”表述为“配图已验收”。
 
 内部内容核心、Card Responsibility Brief、House Lock、Suite Lock、事实核查记录和 QA 记录都不输出。

@@ -152,6 +152,26 @@ def validate_contract_language() -> None:
             "exact preservation must yield to safety")
     require("互斥来源色模式" in router and "一个且仅一个来源色模式声明" in contract,
             "per-card source-color modes must be mutually exclusive")
+    require("当前会话暴露了可实际调用的生图工具，而不是仅凭平台名称推测其能力" in skill,
+            "image-generation handoff must use callable capability detection")
+    require("询问使用本次产物的输出语言" in skill and
+            "Image generation is available in the current environment" in skill and
+            "正确处理单复数，不夹入固定中文" in skill,
+            "image-generation offer must follow the requested output language")
+    require("文章-only、工具不可调用、能力无法确认或用户要求严格限定输出时保持静默" in skill,
+            "image-generation offer must preserve explicit output limits")
+    require("不得让该询问阻塞或替代本次交付" in skill and
+            "只有用户确认后才调用生图工具" in skill,
+            "image-generation handoff must be non-blocking and confirmation-gated")
+    require("能调用生图工具与能读取成图做检查是两项独立能力" in skill and
+            "只能生成但无法读取成图时" in skill and
+            "This session can generate images but cannot inspect the final bitmaps" in skill and
+            "逐图用输出语言标记" in skill,
+            "bitmap-inspection capability and unverified fallback must be explicit")
+    readme = read(ROOT / "README.md")
+    readme_zh = read(ROOT / "README.zh-CN.md")
+    require("does not automatically" in readme and "默认不会自动" in readme_zh,
+            "both READMEs must document opt-in final-image generation")
 
     good_house = "来源色模式：house-only；本图没有来源色资产，所有身份锚点仅使用固定四色。"
     good_bounded = (
